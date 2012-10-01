@@ -1,0 +1,8 @@
+News about the R package timeROC:
+--------------------------------
+
+
+Main changes in Version 0.2 (2013-05-27):
+* New functions : SeSpPPVNPV, plotAUCcurve and plotAUCcurveDiff
+* Simultaneous confidence bands computation added to confint function
+ 

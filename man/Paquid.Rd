@@ -30,7 +30,7 @@ PAQUID is a prospective cohort study initiated in 1988 in South Western France t
 	The paquid epidemiological program on brain ageing.
 	Neuroepidemiology, 11(1):14--18.
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2012). Estimating and Comparing time-dependent areas under ROC curves
+	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
 	for censored event times with competing risks. Submitted. 
 }
 

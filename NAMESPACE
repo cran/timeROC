@@ -1,5 +1,5 @@
 
-export("timeROC","compare")
+export("timeROC","compare","plotAUCcurve","plotAUCcurveDiff","SeSpPPVNPV")
 
 import(pec)
 import(mvtnorm)
@@ -10,6 +10,9 @@ S3method(confint,ipcwsurvivalROC)
 
 S3method(print,ipcwcompetingrisksROC)
 S3method(print,ipcwsurvivalROC)
+
+S3method(print,ipcwsurvivalSeSpPPVNPV)
+S3method(print,ipcwcompetingrisksSeSpPPVNPV)
 
 S3method(plot,ipcwcompetingrisksROC)
 S3method(plot,ipcwsurvivalROC)

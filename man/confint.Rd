@@ -7,11 +7,17 @@
 Confidence intervals for areas under time-dependent ROC curves
 }
 \description{
-This function compute the confidence interval for areas under time-dependent ROC curves (time-dependent AUC). Confidence interval are computed from the asymptotic normality of time-dependent AUC estimators. Standard errors are estimated from the iid-representation of the estimator. The method is at present only implemented for inverse probability of censoring weights computed from a Kaplan-Meier estimator. 
+This function computes pointwise confidence interval and simultaneous
+confidence bands for areas under time-dependent ROC curves
+(time-dependent AUC). Pointwise confidence intervals and simultaneous
+confidence bands are computed from the asymptotic normality of
+time-dependent AUC estimators. Standard errors are estimated from the iid-representation of the
+estimator. The method is at present only implemented for inverse
+probability of censoring weights computed from a Kaplan-Meier estimator. 
 }
 \usage{
-\method{confint}{ipcwsurvivalROC}(object, parm=NULL, level = 0.95, ...)
-\method{confint}{ipcwcompetingrisksROC}(object, parm=NULL, level = 0.95, ...)
+\method{confint}{ipcwsurvivalROC}(object, parm=NULL, level = 0.95,n.sim=2000, ...)
+\method{confint}{ipcwcompetingrisksROC}(object, parm=NULL, level = 0.95,n.sim=2000, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,26 +25,71 @@ This function compute the confidence interval for areas under time-dependent ROC
 }
   \item{parm}{ Dummy argument. (Not used).
 }
-  \item{level}{ the confidence level required. Default is \code{0.95}. 
+  \item{level}{ The confidence level required. Default is \code{0.95}. 
+}
+  \item{n.sim}{ The number of simulations for computing simultaneous
+    confidence bands.
 }
   \item{...}{ Dummy argument. (Not used).
 }
 }
 \details{
 Time-dependent AUC estimators are asymptotically normally distributed. Then, confidence intervals are computed using an estimate of the variance and the quantiles of the standard normal distribution.
-To compute the variance estimates, the function computes  the empirical variance estimates of the estimated iid-representations of the time-dependent AUC estimators.  
+To compute the variance estimates, the function computes  the empirical
+variance estimates of the estimated iid-representations of the
+time-dependent AUC estimators.
+A simulation technique is used for computing appropriate quantiles of
+simultaneous confidence bands.
 }
 \value{
-\bold{Without competing risks :} a matrix. Columns correspond to the lower and the upper bounds of the confidence intervals. Rows correspond to the  time points for which time-dependent AUC estimator was computed.
+  \bold{Without competing risks,} a list containing :
+  \itemize{
+    \item \code{CI_AUC} : a matrix.   Columns correspond to the lower
+    and the upper bounds of the pointwise confidence intervals of AUC. Rows
+    correspond to the  time points for which time-dependent AUC estimator was computed.
+    \item \code{CB_AUC} : a matrix.   Columns correspond to the lower
+    and the upper bounds of the simultaneous confidence band of the AUC curve. Rows
+    correspond to the  time points for which time-dependent AUC estimator was computed.
+    \item \code{C.alpha} : a numeric value corresponding to the quantile
+    required for simultaneous confidence band computation (estimated by
+    simulations).
+    }
+    \bold{With competing risks,} a list containing :
+  \itemize{
+    \item \code{CI_AUC_1} : a matrix.   Columns correspond to the lower
+    and the upper bounds of the pointwise confidence intervals of AUC
+    with definition \bold{(i)} of controls. Rows correspond to the  time
+    points for which time-dependent AUC estimator was computed.
+    \item \code{CB_AUC_1} : a matrix.   Columns correspond to the lower
+    and the upper bounds of  the simultaneous confidence band of the AUC curve
+    with definition \bold{(i)} of controls. Rows correspond to the  time
+    points for which time-dependent AUC estimator was computed.
+    \item \code{C.alpha.1} : a numeric value corresponding to the quantile
+    required for simultaneous confidence bands computation \code{CB_AUC_1} (estimated by
+    simulations).
+  }
+   \itemize{
+    \item \code{CI_AUC_2} : a matrix.   Columns correspond to the lower
+    and the upper bounds of the pointwise confidence intervals of AUC
+    with definition \bold{(ii)} of controls. Rows correspond to the  time
+    points for which time-dependent AUC estimator was computed.
+    \item \code{CB_AUC_2} : a matrix.   Columns correspond to the lower
+    and the upper bounds of the simultaneous confidence band  of the AUC curve
+    with definition \bold{(ii)} of controls. Rows correspond to the  time
+    points for which time-dependent AUC estimator was computed.
+    \item \code{C.alpha.2} : a numeric value corresponding to the quantile
+    required for simultaneous confidence band computation \code{CB_AUC_2} (estimated by
+    simulations).
+   }
 
-\bold{With competing risks :} a list of two matrices, one for each time-dependent AUC definition (\bold{(i)} and \bold{(ii)}, see details about \code{\link{timeROC}} function). Rows correspond to the  time points for which time-dependent AUC estimator was computed.
+    For AUC definitions \bold{(i)} and \bold{(ii)}, see details about \code{\link{timeROC}} function.
 
 }
 \references{
 	Hung, H. and Chiang, C. (2010). Estimation methods for time-dependent AUC with survival data.
 	Canadian Journal of Statistics, 38(1):8-26
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2012). Estimating and Comparing time-dependent areas under ROC curves
+	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
 	for censored event times with competing risks. Submitted. 
 }
 \author{
@@ -46,10 +97,8 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 }
 
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-\code{\link{compare}},\code{\link{timeROC}}
+\code{\link{timeROC}}, \code{\link{compare}}, \code{\link{plotAUCcurve}}, \code{\link{plotAUCcurveDiff}}
 }
 \examples{
 ##-------------Without competing risks-------------------

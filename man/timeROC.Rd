@@ -36,7 +36,9 @@ The method used to compute the weights. \code{weighting="marginal"} uses the Kap
 The vector of times points "t" at which we want to compute the time-dependent ROC curve. If vector \code{times} contains only a single value, then value zero is added.
 }
   \item{ROC}{
-A logical value that indicates if we want to save the estimates of sensitivities and specificties. Default value is \code{ROC = TRUE}.}
+A logical value that indicates if we want to save the estimates of
+sensitivities and specificties. Default value is \code{ROC = TRUE}.
+}
   \item{iid}{
 A logical value that indicates if we want to compute the iid-representation of the area under time-dependent ROC curve estimator. \code{iid = TRUE} is required for computation of all inference procedures (Confidence intervals or test for comparing AUCs). For large sample size (greater than 2000, say) and/or large length of vector \code{times}, the computation of the iid representations might be time-consuming.  Default value is \code{iid = FALSE}.}
 }
@@ -49,11 +51,9 @@ Let \eqn{T_i}{T_i} denote the event time of the subject \eqn{i}{i}.
 
 \bold{Without competing risks :}  A case is defined as a subject \eqn{i}{i} with \eqn{T_i \leq t}{T_i <=t}. A control is defined as a subject \eqn{i}{i} with \eqn{T_i > t}{T_i > t}.
 
-
 \bold{With competing risks :} In this setting, subjects may undergo different type of events, denoted by \eqn{\delta_i}{\delta_i} in the following. Let suppose that we are interested in the event \eqn{\delta_i=1}{\delta_i=1}. Then, a case is defined as a subject \eqn{i}{i} with \eqn{T_i \leq t}{T_i <=t} and \eqn{\delta_i=1}{\delta_i = 1}.
 With competing risks, two definitions of controls were suggested: \bold{(i)} a control is defined as a subject \eqn{i}{i} that is free of any event, i.e with   \eqn{T_i > t}{T_i > t}, and \bold{(ii)} a control is defined as a subject \eqn{i}{i} that is not a case, i.e with \eqn{T_i > t}{T_i > t} or with \eqn{T_i \leq t}{T_i <=t} and \eqn{\delta_i \neq 1}{\delta_i != 1 }.
 For all outputs of this package, objects named with \code{_1} refer to definition \bold{(i)}. For instance \code{AUC_1} or \code{se_1} refer to time-dependent area under the ROC curve and its estimated standard error according to the definition \bold{(i)}. Objects named with \code{_2} refer to definition \bold{(ii)} .
-
 }
 
 
@@ -89,10 +89,7 @@ For all outputs of this package, objects named with \code{_1} refer to definitio
   		\item \code{n} : the sample size, after having omitted missing vaues. 
   		\item \code{inference} : a list that contains, among other things, iid-representations and estimated standard errors of the estimators, and that is used for computation of comparison tests and confidence intervals.
   		\item \code{computation_time} : the computation time, in seconds.
- 	}
-  
-  
-    
+ 	}    
 }
 \references{
 	Hung, H. and Chiang, C. (2010). Estimation methods for time-dependent AUC with survival data.
@@ -101,8 +98,13 @@ For all outputs of this package, objects named with \code{_1} refer to definitio
 	Uno, H., Cai, T., Tian, L. and Wei, L. (2007). Evaluating prediction rules for t-years survivors with censored regression models.
 	Journal of the American Statistical Association, 102(478):527-537.
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2012). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted. 	
+	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
+	for censored event times with competing risks. Submitted.
+
+	P. Blanche, A. Latouche, V. Viallon (2013). Time-dependent AUC
+	with right-censored data: a survey study. 
+	(to appear in) Risk Assessment and Evaluation of Predictions,
+	Springer, \url{http://arxiv.org/abs/1210.6805}.
 }
 \author{
 Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
@@ -114,17 +116,21 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 \seealso{
 
   \itemize{
-  \item \code{\link{print.ipcwsurvivalROC}} or \code{\link{print.ipcwcompetingrisksROC}} for what the print method does.
   \item \code{\link{compare}} for testing a difference of time-dependent AUCs.
-  \item \code{\link{confint.ipcwsurvivalROC}} and \code{\link{confint.ipcwcompetingrisksROC}} for confidence intervals of  time-dependent AUC.
-  \item \code{\link{plot.ipcwsurvivalROC}} and \code{\link{plot.ipcwcompetingrisksROC}} for plotting  time-dependent ROC curves.
+  \item \code{\link[=confint.ipcwsurvivalROC]{confint}} for confidence intervals of  time-dependent AUC.
+  \item \code{\link{SeSpPPVNPV}} for estimating Sensitivity (Se), Specificity (Sp), Positive Predictive
+  Value (PPV) and Negative Predictive Value (NPV) at a given cutpoint
+  marker value.
+  \item \code{\link[=plot.ipcwsurvivalROC]{plot}} for plotting  time-dependent ROC curves.
+  \item \code{\link{plotAUCcurve}} for plotting time-dependent AUC curve.
+  \item \code{\link{plotAUCcurveDiff}} for  plotting the curve of the
+  difference of two time-dependent AUCs over time.
   }
 }
 
 
 
 \examples{
-
 ##-------------Without competing risks-------------------
 
 data(pbc)

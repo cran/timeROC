@@ -5,7 +5,7 @@
 Compute tests for comparing two time-dependent AUC
 }
 \description{
-This function compute the p-value for testing the null hypothesis that asserts that two time-dependent AUCs of two markers are equal. 
+This function computes the p-value for testing the null hypothesis that asserts that two time-dependent AUCs of two markers are equal. 
 The two markers must have been measured on the same subjects.
 }
 
@@ -32,7 +32,7 @@ relative error tolerance as double. This optional technical argument is the argu
 }
 \details{
 For each time points, the function computes the difference between estimated AUCs of both markers, the variance of the difference using the iid-representation of the AUC estimators, and return the p-value of the comparison test. For each time point "t", the null hypothesis that is tested is : "AUC of both markers are equal at time "t" ".
-When option \code{adjusted = TRUE} is chosen, then the function also computes the adjusted p-values, to account for the fact that we compute as many p-values as there as time points. The computation is based on the fact that (i) the vector of the differences of AUCs are asymptotically normally distributed, and  that (ii)  the variance-covariance matrix can be consistently be estimated using the iid-representations of the AUC estimators at all time points.
+When option \code{adjusted = TRUE} is chosen, then the function also computes the adjusted p-values, to account for the fact that we compute as many p-values as there as time points. The computation is based on the fact that (i) the vector of the differences of AUCs are asymptotically normally distributed, and  that (ii)  the variance-covariance matrix can be consistently estimated using the iid-representations of the AUC estimators at all time points.
 
 
 }
@@ -46,7 +46,7 @@ The function \code{compare} returns a list. The list contains p-values of the co
 	Bretz, F., Hothorn, T., and Westfall, P. (2010). Multiple comparisons using R. Chapman \& Hall/CRC.
 	
 	
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2012). Estimating and Comparing time-dependent areas under ROC curves
+	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
 	for censored event times with competing risks. Submitted. 
 }
 \author{
@@ -56,8 +56,8 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{timeROC}}, \code{\link{confint.ipcwsurvivalROC}}, \code{\link{confint.ipcwcompetingrisksROC}}
-}
+  \code{\link{timeROC}}, \code{\link[=confint.ipcwsurvivalROC]{confint}}
+  }
 \examples{
 ##-------------Without competing risks-------------------
 data(pbc)
