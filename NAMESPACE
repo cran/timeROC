@@ -1,0 +1,15 @@
+
+export("timeROC","compare")
+
+import(pec)
+import(mvtnorm)
+
+S3method(confint,ipcwcompetingrisksROC)
+S3method(confint,ipcwsurvivalROC)
+
+
+S3method(print,ipcwcompetingrisksROC)
+S3method(print,ipcwsurvivalROC)
+
+S3method(plot,ipcwcompetingrisksROC)
+S3method(plot,ipcwsurvivalROC)
