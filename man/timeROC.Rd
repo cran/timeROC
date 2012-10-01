@@ -98,16 +98,16 @@ For all outputs of this package, objects named with \code{_1} refer to definitio
 	Uno, H., Cai, T., Tian, L. and Wei, L. (2007). Evaluating prediction rules for t-years survivors with censored regression models.
 	Journal of the American Statistical Association, 102(478):527-537.
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted.
+	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 
-	P. Blanche, A. Latouche, V. Viallon (2013). Time-dependent AUC
-	with right-censored data: a survey study. 
-	(to appear in) Risk Assessment and Evaluation of Predictions,
+	P. Blanche, A. Latouche, V. Viallon (2013). Time-dependent AUC with right-censored data: A Survey.
+	Risk Assessment and Evaluation of Predictions, 239-251,
 	Springer, \url{http://arxiv.org/abs/1210.6805}.
 }
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 
@@ -132,7 +132,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 
 \examples{
 ##-------------Without competing risks-------------------
-
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects

@@ -7,7 +7,12 @@ Paquid cohort data
 }
 
 \description{
-PAQUID is a prospective cohort study initiated in 1988 in South Western France to explore functional and cerebral ageing. This sample includes n=2561 subjects. Data contains a time-to-event (minimum between time from enrolment to dementia onset and time from enrolment to death without dementia), a status indicator, and two cognitive scores measured at baseline.
+PAQUID is a prospective cohort study initiated in 1988 in South Western
+France to explore functional and cerebral ageing. This sample includes
+n=2561 subjects. Data contains a time-to-event (minimum between time
+from enrolment to dementia onset and time from enrolment to death
+without dementia), a status indicator, and two cognitive scores measured
+at baseline.
 }
 
 \usage{data(Paquid)}
@@ -23,15 +28,15 @@ PAQUID is a prospective cohort study initiated in 1988 in South Western France t
 }
 
 
-\references{
-	
+\references{	
 	Dartigues, J., Gagnon, M., Barberger-Gateau, P., Letenneur, L., Commenges, D.,
 	Sauvel, C., Michel, P., and Salamon, R. (1992).
 	The paquid epidemiological program on brain ageing.
 	Neuroepidemiology, 11(1):14--18.
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted. 
+        Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 }
 
 \examples{

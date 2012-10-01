@@ -1,0 +1,23 @@
+citHeader("To cite timeROC in publications use:")
+
+citEntry(entry = "Article",
+  title = "Estimating and Comparing time-dependent areas under receiver
+    operating characteristic curves for censored event times with
+    competing risks",
+  author       = personList(as.person("Paul Blanche"),
+                   as.person("Jean-Francois Dartigues"),
+                   as.person("Helene Jacqmin-Gadda")),
+  journal      = "Statistics in Medicine",
+  year         = "2013",
+  volume       = "32",
+  number       = "30",
+  pages        = "5381--5397",
+  url          = "http://onlinelibrary.wiley.com/doi/10.1002/sim.5958/full",
+
+  textVersion  =
+  paste("Paul Blanche, Jean-Francois Dartigues, Helene Jacqmin-Gadda (2013).",
+        "Estimating and Comparing time-dependent areas under receiver
+    operating characteristic curves for censored event times with
+    competing risks.",
+        "Statistics in Medicine, 32(30), 5381-5397.","URL http://onlinelibrary.wiley.com/doi/10.1002/sim.5958/full .")
+)

@@ -24,7 +24,7 @@ confint.ipcwsurvivalROC <- function(object,parm=NULL,level=0.95,n.sim=2000,...){
   colnames(tab_AUC_1)<-c(paste(((1-level)/2)*100,"%",sep=""),paste((1-(1-level)/2)*100,"%",sep=""))
   # }}}
   # {{{ Simultaneous confidence band
-  # genrate the quantile
+  # compute the quantile
   vect.Delta <- rep(NA,n.sim)
   for (i in 1:n.sim){
     temp1 <- mat.iid*rnorm(object$n)
@@ -54,7 +54,7 @@ confint.ipcwcompetingrisksROC <- function(object,parm=NULL,level=0.95,n.sim=2000
   AUC.1 <-  object$AUC_1[!is.na(object$AUC_1)]
   se.1 <- object$inference$vect_sd_1[!is.na(object$AUC_1)]
   mat.iid.1 <- object$inference$mat_iid_rep_1[,!is.na(object$AUC_1),drop=FALSE]
-  AUC.2 <-  object$AUC_1[!is.na(object$AUC_2)]
+  AUC.2 <-  object$AUC_2[!is.na(object$AUC_2)]
   se.2 <- object$inference$vect_sd_2[!is.na(object$AUC_2)]
   mat.iid.2 <- object$inference$mat_iid_rep_2[,!is.na(object$AUC_2),drop=FALSE]
   # }}}
@@ -69,7 +69,7 @@ confint.ipcwcompetingrisksROC <- function(object,parm=NULL,level=0.95,n.sim=2000
   colnames(tab_AUC_2)<-c(paste(((1-level)/2)*100,"%",sep=""),paste((1-(1-level)/2)*100,"%",sep=""))
   # }}}
   # {{{ Simultaneous confidence band
-  # genrate the quantile
+  # compute the quantile
   vect.Delta.1 <- rep(NA,n.sim)
   vect.Delta.2 <- rep(NA,n.sim)
   for (i in 1:n.sim){

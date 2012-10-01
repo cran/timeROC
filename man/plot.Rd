@@ -46,7 +46,7 @@ Arguments to be passed to plot method. (See \code{\link[graphics]{plot}}).
 
 
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 
@@ -57,7 +57,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 
 \examples{
 ##-------------Without competing risks----------------
-
+library(survival)
 data(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects
 pbc$status<-as.numeric(pbc$status==2) # create event indicator: 1 for death, 0 for censored
@@ -65,6 +65,7 @@ pbc$status<-as.numeric(pbc$status==2) # create event indicator: 1 for death, 0 f
 # we evaluate bilirubin as a prognostic biomarker
 #(weights computed using an additive Aalen model 
 # with covariates bili, chol and albumin). 
+library(timereg)
 ROC.bili.aalen<-timeROC(T=pbc$time,
                       delta=pbc$status,marker=pbc$bili,
                       other_markers=as.matrix(pbc[,c("chol","albumin")]),

@@ -6,3 +6,9 @@ Main changes in Version 0.2 (2013-05-27):
 * New functions : SeSpPPVNPV, plotAUCcurve and plotAUCcurveDiff
 * Simultaneous confidence bands computation added to confint function
  
+Main changes in Version 0.3 (2015-03):
+* Bug in confint.ipcwcompetingrisksROC corrected
+* Technical changes (remove packages from "Depends", add them to "Imports", add others in "Suggests")
+* Update reference
+* CITATION added
+* email changed

@@ -89,11 +89,12 @@ simultaneous confidence bands.
 	Hung, H. and Chiang, C. (2010). Estimation methods for time-dependent AUC with survival data.
 	Canadian Journal of Statistics, 38(1):8-26
 
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted. 
+	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 }
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 
@@ -102,7 +103,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 }
 \examples{
 ##-------------Without competing risks-------------------
-
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects

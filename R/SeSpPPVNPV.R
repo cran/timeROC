@@ -85,7 +85,7 @@ SeSpPPVNPV <-function(cutpoint,T,delta,marker,other_markers=NULL,cause,weighting
   marker<- marker[order_T]
   # use ipcw function from pec package
   if(weighting=="marginal"){
-    weights <- ipcw(Surv(failure_time,status)~1,data=data.frame(failure_time=T,status=as.numeric(delta!=0)),method="marginal",times=times,subjectTimes=T,subjectTimesLag=1)
+    weights <- pec::ipcw(Surv(failure_time,status)~1,data=data.frame(failure_time=T,status=as.numeric(delta!=0)),method="marginal",times=times,subjectTimes=T,subjectTimesLag=1)
   }
   if(weighting=="cox"){
     if (missing(other_markers)){marker_censoring<-marker } 
@@ -94,7 +94,7 @@ SeSpPPVNPV <-function(cutpoint,T,delta,marker,other_markers=NULL,cause,weighting
     colnames(marker_censoring)<-paste("X", 1:ncol(marker_censoring), sep="")
     fmla <- as.formula(paste("Surv(T,status)~", paste(paste("X", 1:ncol(marker_censoring), sep=""), collapse= "+")))
     data_weight<-as.data.frame(cbind(data.frame(T=T,status=as.numeric(delta!=0)),marker_censoring))
-    weights <- ipcw(fmla,data=data_weight,method="cox",times=as.matrix(times),subjectTimes=data_weight[,"T"],subjectTimesLag=1)
+    weights <- pec::ipcw(fmla,data=data_weight,method="cox",times=as.matrix(times),subjectTimes=data_weight[,"T"],subjectTimesLag=1)
   }
   if(weighting=="aalen"){
     if (missing(other_markers)){marker_censoring<-marker }
@@ -103,7 +103,7 @@ SeSpPPVNPV <-function(cutpoint,T,delta,marker,other_markers=NULL,cause,weighting
     colnames(marker_censoring)<-paste("X", 1:ncol(marker_censoring), sep="")
     fmla <- as.formula(paste("Surv(T,status)~", paste(paste("X", 1:ncol(marker_censoring), sep=""), collapse= "+")))
     data_weight<-as.data.frame(cbind(data.frame(T=T,status=as.numeric(delta!=0)),marker_censoring))
-    weights <- ipcw(fmla,data=data_weight,method="aalen",times=as.matrix(times),subjectTimes=data_weight[,"T"],subjectTimesLag=1)
+    weights <- pec::ipcw(fmla,data=data_weight,method="aalen",times=as.matrix(times),subjectTimes=data_weight[,"T"],subjectTimesLag=1)
   }
   # we order by marker values (in order to compute Se and Sp)
   ## order_marker<-order(-marker)

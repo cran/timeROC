@@ -46,7 +46,7 @@ Furthermore, the function recalls the method used to compute the inverse probabi
 
 
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 \seealso{
@@ -56,6 +56,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 
 \examples{
 ##-------------Without competing risks-------------------
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects

@@ -136,11 +136,12 @@ For all outputs of this package, objects named with \code{_1} refer to definitio
  	}    
 }
 \references{
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted. 	
+  	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 }
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 \seealso{
@@ -148,7 +149,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
 }
 \examples{
 ##-------------Without competing risks-------------------
-
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects

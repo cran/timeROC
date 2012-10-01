@@ -2,7 +2,6 @@ Special thanks :
 -----------------------------
 
 I warmly thank Thomas A. Gerds for his very useful R package Refresh which I used a hundred times to re-build and/or check timeROC, and for having talked to me about Emacs Speaks Statistics (ESS) that is very convenient for R programming. 
-Refresh can be downloaded at: http://192.38.117.59/~tag/research/Rontology/Refresh-snps.html
 
 I warmly thank Ulla Brasch Mogensen for her help to improve the help documentation.
 

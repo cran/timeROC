@@ -45,12 +45,12 @@ The function \code{compare} returns a list. The list contains p-values of the co
 
 	Bretz, F., Hothorn, T., and Westfall, P. (2010). Multiple comparisons using R. Chapman \& Hall/CRC.
 	
-	
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted. 
+	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 }
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -60,6 +60,7 @@ Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
   }
 \examples{
 ##-------------Without competing risks-------------------
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects

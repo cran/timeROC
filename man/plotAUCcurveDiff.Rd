@@ -58,14 +58,15 @@ null hypotheses such as "for all time t within an interval, AUC(t) for
 }
 
 \references{
-	Blanche P., Dartigues J-F and Jacqmin-Gadda H. (2013). Estimating and Comparing time-dependent areas under ROC curves
-	for censored event times with competing risks. Submitted.
+	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
+	receiver operating characteristic curves for censored event times with competing risks. 
+	Statistics in medicine, 32(30), 5381-5397.
 	
 	Hung, H. and Chiang, C. (2010). Estimation methods for time-dependent AUC with survival data.
 	Canadian Journal of Statistics, 38(1):8-26
 }
 \author{
-Paul Blanche \email{Paul.Blanche@isped.u-bordeaux2.fr}
+Paul Blanche \email{pabl@sund.ku.dk}
 }
 \note{
 The two markers evluated in objects \code{object1} and
@@ -84,6 +85,7 @@ The two markers evluated in objects \code{object1} and
 ## computation times is roughly 10 seconds
 
 ##-------------Without competing risks-------------------
+library(survival)
 data(pbc)
 head(pbc)
 pbc<-pbc[!is.na(pbc$trt),] # select only randomised subjects
