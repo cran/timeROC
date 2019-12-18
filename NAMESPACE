@@ -16,3 +16,6 @@ S3method(print,ipcwcompetingrisksSeSpPPVNPV)
 
 S3method(plot,ipcwcompetingrisksROC)
 S3method(plot,ipcwsurvivalROC)
+
+importFrom("graphics", "abline", "lines", "matlines", "plot")
+importFrom("stats", "as.formula", "confint", "pnorm", "qnorm","quantile", "rnorm", "sd", "var")

@@ -1,17 +1,17 @@
 Package: timeROC
 Type: Package
 Title: Time-Dependent ROC Curve and AUC for Censored Survival Data
-Version: 0.3
-Date: 2012-10-01
+Version: 0.4
+Date: 2019-12-18
 Author: Paul Blanche
 Maintainer: Paul Blanche <paulfblanche@gmail.com>
-Description: Estimation of time-dependent ROC curve and area under time dependent ROC curve (AUC) in the presence of censored data, with or without competing risks. Confidence intervals of AUCs and tests for comparing AUCs of two rival markers measured on the same subjects can be computed, using the iid-representation of the AUC estimator. Plot functions for time-dependent ROC curves and AUC curves are provided. Time-dependent Positive Predictive Values (PPV) and Negative Predictive Values (NPV) can also be computed.
+Description: Estimation of time-dependent ROC curve and area under time dependent ROC curve (AUC) in the presence of censored data, with or without competing risks. Confidence intervals of AUCs and tests for comparing AUCs of two rival markers measured on the same subjects can be computed, using the iid-representation of the AUC estimator. Plot functions for time-dependent ROC curves and AUC curves are provided. Time-dependent Positive Predictive Values (PPV) and Negative Predictive Values (NPV) can also be computed. See Blanche et al. (2013) <doi:10.1002/sim.5958> and references therein for the details of the methods implemented in the package.
 Depends: R (>= 2.9.1)
 Imports: pec (>= 2.4.4), mvtnorm (>= 1.0-1)
 Suggests: survival, timereg
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2015-03-24 18:59:00 UTC; paulo
 NeedsCompilation: no
+Packaged: 2019-12-18 14:35:44 UTC; paul
 Repository: CRAN
-Date/Publication: 2015-03-25 00:27:15
+Date/Publication: 2019-12-18 16:00:02 UTC

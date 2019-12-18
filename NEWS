@@ -12,3 +12,9 @@ Main changes in Version 0.3 (2015-03):
 * Update reference
 * CITATION added
 * email changed
+
+Main changes in Version 0.4 (2019-12-18):
+Only very minor changes to pass the checks with newest version of R.
+* add some importFrom in NAMESPACE
+* change code for testing wether the object other_markers is a matrix in the functions.
+* Add a reference in the DESCRIPTION.

@@ -72,7 +72,7 @@ timeROC<-function(T,delta,marker,other_markers=NULL,cause,weighting="marginal",t
     stop("Choose at least one time for computing the time-dependent AUC\n") } 
   if (!weighting %in% c("marginal","cox","aalen")){
     stop("the weighting argument must be marginal (default), cox or aalen.\n") }  
-  if (weighting %in% c("cox","aalen") & !missing(other_markers) & !class(other_markers)=="matrix"){
+  if (weighting %in% c("cox","aalen") & !missing(other_markers) & !("matrix" %in% class(other_markers))){
     stop("argument other_markers must be a matrix\n") }
   if (weighting %in% c("cox","aalen") & !missing(other_markers)){
     if(!nrow(other_markers)==length(marker))  stop("lengths of vector T, delta, marker and number of rows of other_markers have to be equal\n")

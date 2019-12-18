@@ -1,8 +1,8 @@
-2ab00b50a57a2c9ba0d6323ebd0ed01c *DESCRIPTION
-635fc117e96154a37f30c2718d3655ff *NAMESPACE
-ec23d1acf518437c3deb1c9a4aa56985 *NEWS
+3525bea799434081c09080d541c3c3d6 *DESCRIPTION
+9e3d66c498de8ef7a54b5fc1130a3e29 *NAMESPACE
+7b454d34cf125e19f8d32f1869216e59 *NEWS
 62b052ee5174a4f45c98c39ea0b29d6c *R/ComputeIIDKM.R
-cc67c876e8e60095192741e5c8a1ca15 *R/SeSpPPVNPV.R
+e30c2da08dee93b1d36e1de213719b20 *R/SeSpPPVNPV.R
 db477e8eaded75ebd16d87e61c94234c *R/compare_ipcwROC.R
 b5f9cfc07365dac4b48faae00529be3d *R/compute_iid_ac_competing_risks.R
 aad1fd4dbc3654720538e0728c0be108 *R/compute_iid_rep_2.R
@@ -16,7 +16,7 @@ a935cf7c85c997739cd3dd0f6f0c8228 *R/print.ipcwcompetingrisksROC.R
 b1cbb7c2ef2b3d3f971edad58ad73b79 *R/print.ipcwcompetingrisksSeSpPPVNPV.R
 1c65823b9019d865aa635842fc33ba45 *R/print.ipcwsurvivalROC.R
 4f40eb48c09dd63bbe80fb2ed1a2a2dc *R/print.ipcwsurvivalSeSpPPVNPV.R
-b1a8b9f3720c44b8b84d320762e1e0a2 *R/timeROC_3.R
+47c392d98ff8d88e058ec1c3227f4f98 *R/timeROC_3.R
 a63838b14d2d31adc96e84757c74b67d *THANKS
 6089becbc63f48e6c7043a94a0025396 *data/Melano.RData
 fc2d66fc3bdf32318bd2e470e87a6a23 *data/Paquid.RData
