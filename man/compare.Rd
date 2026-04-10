@@ -43,7 +43,7 @@ The function \code{compare} returns a list. The list contains p-values of the co
 \references{
 	Chiang CT, Hung H.(2010). Non-parametric estimation for time-dependent AUC. Journal of Statistical Planning and Inference, 140:1162-1174.
 
-	Bretz, F., Hothorn, T., and Westfall, P. (2010). Multiple comparisons using R. Chapman \& Hall/CRC.
+	Bretz, F., Hothorn, T., and Westfall, P. (2010). Multiple comparisons using R. Chapman & Hall/CRC.
 	
 	Blanche, P., Dartigues, J. F., & Jacqmin-Gadda,	H. (2013). Estimating and comparing time-dependent areas under
 	receiver operating characteristic curves for censored event times with competing risks. 

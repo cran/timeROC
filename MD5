@@ -1,4 +1,4 @@
-3525bea799434081c09080d541c3c3d6 *DESCRIPTION
+205b107fc78663168ce6d72e74c157b9 *DESCRIPTION
 9e3d66c498de8ef7a54b5fc1130a3e29 *NAMESPACE
 7b454d34cf125e19f8d32f1869216e59 *NEWS
 62b052ee5174a4f45c98c39ea0b29d6c *R/ComputeIIDKM.R
@@ -18,13 +18,13 @@ b1cbb7c2ef2b3d3f971edad58ad73b79 *R/print.ipcwcompetingrisksSeSpPPVNPV.R
 4f40eb48c09dd63bbe80fb2ed1a2a2dc *R/print.ipcwsurvivalSeSpPPVNPV.R
 47c392d98ff8d88e058ec1c3227f4f98 *R/timeROC_3.R
 a63838b14d2d31adc96e84757c74b67d *THANKS
-6089becbc63f48e6c7043a94a0025396 *data/Melano.RData
-fc2d66fc3bdf32318bd2e470e87a6a23 *data/Paquid.RData
-56f9f57e1c4406eab9d83e20317bbee0 *inst/CITATION
+75426dc27f505ae05f36fa2fdea4bfa6 *data/Melano.RData
+7fca1dccbbed1ae0277e60681741873c *data/Paquid.RData
+c99430fb67755529ded770a6f5a013ca *inst/CITATION
 7ce97f737cf8869cca33660d779b3f72 *man/Melano.Rd
 658471596b40a148a237726bb4081809 *man/Paquid.Rd
 19a062054f0848881020a0f653e8be21 *man/SeSpPPVNPV.Rd
-f8625afed1360826f52936d688de22e7 *man/compare.Rd
+c87eb41671f804890297b9910fc3f71d *man/compare.Rd
 f4875aa3405b77abc892474ae32f153b *man/confint.Rd
 4fdd3a349368c2f89ec86d91afa5c9d1 *man/plot.Rd
 d9ff218cb8f663db86bca0562aa44dd4 *man/plotAUCcurve.Rd
